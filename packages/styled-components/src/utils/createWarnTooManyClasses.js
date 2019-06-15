@@ -1,6 +1,6 @@
 // @flow
 
-const LIMIT = 200;
+const LIMIT = 20;
 
 export default (displayName: string) => {
   let generatedClasses = {};
@@ -14,7 +14,7 @@ export default (displayName: string) => {
         /* eslint-disable no-console, prefer-template */
         console.warn(
           `Over ${LIMIT} classes were generated for component ${displayName}. \n` +
-            'Consider using the attrs method, together with a style object for frequently changed styles.\n' +
+            'Consider using the attrs method, together with a style object for frequently changing styles.\n' +
             'Example:\n' +
             '  const Component = styled.div.attrs(p => ({\n' +
             '    style: {\n' +

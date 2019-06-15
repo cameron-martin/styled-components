@@ -32,21 +32,21 @@ describe('warn too many classes', () => {
     expect(warnCallCount).toEqual(1);
   });
 
-  it('should warn if number of classes is 200', () => {
+  it('should warn if number of classes is 20', () => {
     const Comp = styled.div`
       width: ${props => props.size};
     `;
-    for (let i = 0; i < 200; i++) {
+    for (let i = 0; i < 20; i++) {
       TestRenderer.create(<Comp size={i} />);
     }
     expect(warnCallCount).toEqual(1);
   });
 
-  it('should not warn if number of classes is below 200', () => {
+  it('should not warn if number of classes is below 20', () => {
     const Comp = styled.div`
       width: ${props => props.size};
     `;
-    for (let i = 0; i < 199; i++) {
+    for (let i = 0; i < 19; i++) {
       TestRenderer.create(<Comp size={i} />);
     }
 
